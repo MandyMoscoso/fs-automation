@@ -29,13 +29,19 @@ afterAll(async () => {
 
 test("Testing Movie List website", async () => {
     await addMovie(driver)    
-    await driver.sleep(3000)
+    await driver.sleep(1000)
    
 })
 
 
-test("Testing Movie List website", async () => {
+test("Testing Movie List website - cross off", async () => {
+    
+    await crossOffMovie(driver);
+    await driver.sleep(1000)
+})
+
+test("Testing delete", async () => {
     
     await deleteMovie(driver);
-    await driver.sleep(3000)
+    await driver.sleep(1000)
 })
