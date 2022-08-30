@@ -53,3 +53,4 @@ function revealMessage() {
         message.classList.add('hide')
     }, 1000)
 }
+

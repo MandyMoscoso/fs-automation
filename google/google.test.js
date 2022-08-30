@@ -6,7 +6,7 @@ require('chromedriver')
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 const { By } = require('selenium-webdriver')
 // const {searchBar} = require('./searchBar.js')
-jest.setTimeout(7000)
+jest.setTimeout(10000)
 // First we're going to navigate to Google.com
 beforeAll(async () => {
     await (await driver).get('https://www.google.com/')
@@ -37,7 +37,7 @@ test('I can search Google', async () => {
     await driver.findElement(By.name('q')).clear() 
 
     // Let's do another search!
-    await searchBar.sendKeys(`number to string\n`)
+    await searchBar.sendKeys(`javascript\n`)
 
     await driver.sleep(2000) 
 })
